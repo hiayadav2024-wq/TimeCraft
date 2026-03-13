@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Upload Timetable</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Upload Your Timetable</h2>
+
+<div id="dropArea" class="upload-box">
+Drag & Drop Your Timetable Here
+<br><br>
+<input type="file" id="fileInput">
+</div>
+
+<br>
+
+<a href="preferences.html">
+<button class="btn">Next</button>
+</a>
+
+<script>
+
+let dropArea=document.getElementById("dropArea");
+let fileInput=document.getElementById("fileInput");
+
+dropArea.addEventListener("dragover",(e)=>{
+e.preventDefault();
+dropArea.style.background="#f0f0f0";
+});
+
+dropArea.addEventListener("drop",(e)=>{
+e.preventDefault();
+
+let file=e.dataTransfer.files[0];
+
+localStorage.setItem("timetableFile",file.name);
+
+alert("File Uploaded: "+file.name);
+});
+
+fileInput.addEventListener("change",function(){
+
+let file=this.files[0];
+
+localStorage.setItem("timetableFile",file.name);
+
+alert("File Uploaded: "+file.name);
+
+});
+
+</script>
+
+</body>
+</html>

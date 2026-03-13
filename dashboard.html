@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Dashboard</h1>
+
+<button onclick="toggleDark()">Toggle Dark Mode</button>
+
+<div class="dashboard">
+
+<div class="widget">
+
+<h3>Reminders</h3>
+
+<ul id="taskList"></ul>
+
+</div>
+
+<div class="widget">
+
+<input id="taskInput" placeholder="Reminder">
+<input type="datetime-local" id="taskTime">
+
+<button onclick="addTask()">Add Reminder</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="darkmode.js"></script>
+
+</body>
+</html>

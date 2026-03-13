@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Weekly Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Your Weekly Planner</h2>
+
+<table id="planner">
+
+<tr>
+<th>Day & Time</th>
+<th>Activity</th>
+</tr>
+
+</table>
+
+<br>
+
+<button onclick="exportPDF()">Export Planner to PDF</button>
+
+<h3>AI Suggestions</h3>
+
+<p id="aiText"></p>
+
+<button onclick="aiSuggestion()">Generate Suggestion</button>
+
+<br><br>
+
+<a href="dashboard.html">
+<button class="btn">Dashboard</button>
+</a>
+
+<script src="jspdf.min.js"></script>
+<script src="planner.js"></script>
+<script src="pdf.js"></script>
+<script src="ai.js"></script>
+
+</body>
+</html>
